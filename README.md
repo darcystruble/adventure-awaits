@@ -15,3 +15,8 @@ The landing page will have a brief explanation of the scale of difficulty.
 - All information pertaining to the search will show up in text boxes below.
 
 ## Wireframe images
+
+![Adventure-Awaits-main_page drawio](https://github.com/darcystruble/adventure-awaits/assets/142416987/0b7fdfbe-fe11-4edb-b062-e9d1da2bcc36)
+
+![Adventure-Awaits-hike_page drawio](https://github.com/darcystruble/adventure-awaits/assets/142416987/1926ff98-0ba8-4484-affc-109fd58bda9a)
+

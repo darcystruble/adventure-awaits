@@ -4,7 +4,7 @@ A website that helps parents, grandparents, aunts and uncles find age appropriat
 
 The landing page will have a brief explanation of the scale of difficulty.
 
-
+![adventureAwaits](https://github.com/darcystruble/adventure-awaits/assets/142416987/81f663dc-e9e5-42dc-b6b0-0babc454b3b5)
 
 ## Website Features
 

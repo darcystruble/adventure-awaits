@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Big Adventures with Little Kids</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./learn.js" defer></script>
+</head>
+
+<body>
+    <header class="flex column">
+        <h1 id="site-logo">Big Adventures <br /> with Little Kids</h1>
+        <nav>
+            <ul class="flex flex-end">
+                <li class="nav"><a href="./index.html" class="links">Home</a></li>
+                <li class="nav" id="btn-hike"><a href="./hike.html" class="links">Hike</a></li>
+                <li class="nav" id="btn-backpack"><a href="#" class="links">Junior Ranger</a></li>
+                <li class="nav"><a href="#" class="links">Bike</a></li>
+                <li class="nav" id="btn-learn"><a href="./learn.html" class="links current-page">Learn</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-content learn">
+        <h2 id="learn-header-1">Lesson Plans</h2>
+        <select name="grade" id="grade-select" style="width: 210px">
+                <option value="pick">Select Grade Level</option>
+                <option value="pre">Pre-K - 2nd Grade</option>
+                <option value="third">3rd - 5th Grade</option>
+                <option value="sixth">6th - 8th Grade</option>
+        </select>
+        <button id="get-lessons">click</button>
+        <div id="learn-content"></div>
+    </div>
+
+    <footer></footer>
+</body>
+
+</html>

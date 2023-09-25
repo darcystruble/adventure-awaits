@@ -1,0 +1,209 @@
+/* Elements Across All Pages */
+@font-face {
+    font-family: Archive;
+    src: url(./fonts/Archive-Regular.ttf);
+}
+@font-face {
+    font-family: Glacial Indifference;
+    src: url(./fonts/GlacialIndifference-Regular.otf);
+}
+body {
+    margin: 0;
+    background-color: #e6dfc7;
+    font-family: Glacial Indifference, sans-serif;
+    font-size: 1.4rem;
+    color: #323432;
+}
+.main-content {
+    margin: auto 20px;
+}
+h2 {
+    color: #1a4147;
+    font-family: Archive, sans-serif;
+    font-size: 2.5rem;
+}
+h3 {
+    color: #1a4147;
+    font-family: Archive, sans-serif;
+    font-size: 2rem;
+}
+button {
+    padding: 10px;
+    font-family: Archive, sans-serif;
+}
+
+/* HEADER ELEMENTS */
+header {
+    background-image: url("./assets/Lassen-Volcanic-LassenPeak-ManzanitaLake_Dollar_2400.webp");
+    background-size: cover;
+    background-position: 50% 0;
+    height: 60vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+#site-logo {
+    margin: auto 20px;
+    padding: 15px;
+    width: fit-content;
+    background-color: #2e73717b;
+    border-radius: 20px;
+    color: #b56d2f;
+    text-shadow: #d2a246 2px 2px;
+    font-family: Archive, sans-serif;
+    font-size: 4rem;
+}
+
+
+/* NAV-BAR */
+nav {
+    background-color: #2e7371;
+}
+.nav {
+    list-style: none;
+    margin-right: 10px;
+    padding: 0 15px;
+}
+.links {
+    color: #d2a246;
+    text-decoration: none;
+    font-family: Archive, sans-serif;
+    font-size: 1.5rem;
+}
+a:hover {
+    color: #1a4147;
+}
+a:active {
+    text-shadow: #d2a246 1px 0 10px;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.current-page {
+    color: #1a4147;
+}
+
+/* MAIN PAGE */
+.side-bar-content {
+    margin-top: 30px;
+    padding: 10px;
+    width: 90%;
+    min-height: 200px;
+    background-color: #2e737199;
+    border-radius: 10px;
+}
+#park-photo {
+    max-width: 100%;
+    max-height: auto;
+    border-radius: 10px;
+}
+#park-title {
+    margin-top: -4px;
+    font-family: Archive, sans-serif;
+}
+#park-descrip {
+    margin-top: -15px;
+    font-size: 1.1rem;
+}
+
+/* Page Specific Styling */
+/* PAGES WITH SEARCH */
+#state-select, #age-select, #grade-select {
+    padding: 10px;
+}
+.info-box {
+    padding: 10px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: #2e73714f;
+    border-radius: 15px;
+}
+.info-box div {
+    margin-bottom: 5px;
+}
+.info-box a {
+    color: #2e7371;
+}
+.info-box a:hover {
+    color: #b56d2f;
+}
+.message {
+    margin-top: 20px;
+}
+.display-one {
+    display: none;
+}
+#ranger-content, #hike-content div {
+    margin: 10px 0;
+}
+#ranger-pic{
+    width: 50%;
+    height: auto;
+}
+
+
+/* FLEX */
+.flex {
+    display: flex;
+}
+.column {
+    flex-direction: column;
+}
+.flex-end {
+    justify-content: flex-end;
+}
+.center-row {
+    justify-content: center;
+}
+.center-column {
+    align-items: center;
+}
+.two-thirds {
+    width: 66%;
+}
+.one-third {
+    width: 33%;
+}
+.space-between {
+    justify-content: space-between;
+}
+
+/* media sizes */
+@media screen and (max-width: 800px) {
+    body {
+        font-size: 1.1rem;
+    }
+    #site-logo {
+        font-size: 3rem;
+    }
+    header {
+        height: 35vh;
+    }
+    .links {
+       font-size: 1.5rem; 
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 400px) {
+    body {
+        font-size: 1rem;
+    }
+    #small-column {
+        flex-direction: column;
+        align-items: center;
+    }
+    #site-logo {
+        font-size: 2rem;
+    }
+    .one-third, .two-thirds {
+        width: 100%;
+    }
+}

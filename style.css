@@ -6,6 +6,12 @@
 @font-face {
     font-family: Glacial Indifference;
     src: url(./fonts/GlacialIndifference-Regular.otf);
+    font-weight: regular;
+}
+@font-face {
+    font-family: Glacial Indifference;
+    src: url(./fonts/GlacialIndifference-Bold.otf);
+    font-weight: bold;
 }
 body {
     margin: 0;
@@ -27,6 +33,10 @@ h3 {
     font-family: Archive, sans-serif;
     font-size: 2rem;
 }
+h4 {
+    margin-bottom: -10px;
+}
+
 button {
     padding: 10px;
     font-family: Archive, sans-serif;
@@ -86,6 +96,15 @@ a:active {
 }
 
 /* MAIN PAGE */
+table, th, td {
+    border: 1px solid #1a4147;
+}
+table {
+    width: 90%;
+}
+td {
+    text-align: center;
+}
 .side-bar-content {
     margin-top: 30px;
     padding: 10px;
@@ -94,7 +113,10 @@ a:active {
     background-color: #2e737199;
     border-radius: 10px;
 }
-#park-photo {
+.side-bar-content p {
+    font-size: 1rem;
+}
+#ranger-pic, #ranger-pic-2, #ranger-pic-3, #park-photo {
     max-width: 100%;
     max-height: auto;
     border-radius: 10px;
@@ -104,7 +126,7 @@ a:active {
     font-family: Archive, sans-serif;
 }
 #park-descrip {
-    margin-top: -15px;
+    margin-top: 0px;
     font-size: 1.1rem;
 }
 
@@ -119,6 +141,14 @@ a:active {
     margin-bottom: 20px;
     margin-top: 20px;
     background-color: #2e73714f;
+    border-radius: 15px;
+}
+.info-box-2 {
+    padding: 10px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 2px solid #2e73714f;
     border-radius: 15px;
 }
 .info-box div {
@@ -136,12 +166,14 @@ a:active {
 .display-one {
     display: none;
 }
+.bold {
+    font-weight: bold;
+}
 #ranger-content, #hike-content div {
     margin: 10px 0;
 }
-#ranger-pic{
-    width: 50%;
-    height: auto;
+#get-junior-ranger {
+    margin-top: 20px;
 }
 
 
@@ -155,10 +187,10 @@ a:active {
 .flex-end {
     justify-content: flex-end;
 }
-.center-row {
+.justify-content {
     justify-content: center;
 }
-.center-column {
+.align-items {
     align-items: center;
 }
 .two-thirds {
@@ -170,6 +202,7 @@ a:active {
 .space-between {
     justify-content: space-between;
 }
+
 
 /* media sizes */
 @media screen and (max-width: 800px) {

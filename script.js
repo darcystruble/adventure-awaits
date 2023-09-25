@@ -1,7 +1,6 @@
 ////////////////////
 // DOM ELEMENTS
 let imageParks = document.querySelector('#park-photo')
-let imageName = document.querySelector('#park-title')
 let imageDescrip = document.querySelector('#park-descrip')
 let navBar = document.querySelector('nav')
 

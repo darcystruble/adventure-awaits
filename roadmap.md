@@ -11,3 +11,7 @@
 - Dark mode toggle
 - age/difficulty toggle to allow parent to toggle whether they want to select the adventure based on age or difficulty
 - a print feature that allows you to print each little blurb
+
+# Resources
+CSS Tables
+https://www.w3schools.com/css/css_table.asp

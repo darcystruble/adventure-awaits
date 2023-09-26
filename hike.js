@@ -19,6 +19,7 @@ statePicked.addEventListener('click', async () => {
 
     // FIRST AGE GROUP
     if (age === 'one'){
+        if ()
         // arrays
         let parkCodeArr = []
         // find accessible hikes in state
@@ -37,13 +38,17 @@ statePicked.addEventListener('click', async () => {
             parkHolder.append(parkHeader)
             mainHike.append(parkHolder)
         })
+        console.log(parkCodeArr)
         parkCodeArr.forEach((code) => {
             infoBlurbs.data.data.forEach((blurb) => {
-                if(blurb.relatedParks[0].parkCode === code){
-                    console.log(blurb.shortDescription)
+                let blurbName = document.createElement('div')
+                if(blurb.relatedParks[0].parkCode == code){
+                    console.log(blurb.title, blurb.shortDescription)
+                    blurbName.innerText = blurb.title
                 } else {
-                    console.log('no')
+                    return
                 }
+                mainHike.append(blurbName)
             })
         })
         // infoBlurbs.data.data.forEach((blurb) => {

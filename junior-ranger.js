@@ -45,7 +45,7 @@ button.addEventListener('click', async () => {
             // console.log(park.designation)
             designationDiv.innerText = park.designation
             // console.log(park.url)
-            urlDiv.innerText = park.url
+            urlDiv.innerText = `Click here for more park information`
             urlDiv.href = park.url
         } else {
             return

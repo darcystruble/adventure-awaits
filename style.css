@@ -35,6 +35,7 @@ h3 {
 }
 h4 {
     margin-bottom: -10px;
+
 }
 
 button {
@@ -169,6 +170,15 @@ td {
 .bold {
     font-weight: bold;
 }
+.float {
+    float: left;
+    margin-right: 10px;
+}
+.park-holder {
+    margin-top: 20px;
+    min-height: 310px;
+    margin-bottom: 20px;
+}
 #ranger-content, #hike-content div {
     margin: 10px 0;
 }
@@ -177,6 +187,21 @@ td {
 }
 #hike-main {
     margin-bottom: 40%;
+}
+#hike-main div {
+    margin-bottom: 15px;
+}
+#hike-main a {
+    color:#1a4147;
+}
+#hike-main a:hover {
+    color: #b56d2f;
+}
+#hike-main h4 a {
+    font-size: 2rem;
+}
+#hike-main img {
+    width: 250px;
 }
 
 

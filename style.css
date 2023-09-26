@@ -133,8 +133,16 @@ td {
 
 /* Page Specific Styling */
 /* PAGES WITH SEARCH */
-#state-select, #age-select, #grade-select {
+#activity-select, #state-select, #age-select, #grade-select {
     padding: 10px;
+    font-family: Glacial Indifference, sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+button {
+    font-family: Glacial Indifference, sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 .info-box {
     padding: 10px;

@@ -1,4 +1,4 @@
-/* Elements Across All Pages */
+/* FONTS */
 @font-face {
     font-family: Archive;
     src: url(./fonts/Archive-Regular.ttf);
@@ -13,6 +13,9 @@
     src: url(./fonts/GlacialIndifference-Bold.otf);
     font-weight: bold;
 }
+
+
+/* ALL PAGES ELEMENTS */
 body {
     margin: 0;
     background-color: #e6dfc7;
@@ -39,7 +42,6 @@ h3 {
 }
 h4 {
     margin-bottom: -10px;
-
 }
 
 
@@ -234,10 +236,10 @@ button:hover {
 #active-main div, #hike-main div, #hike-second div {
     margin-bottom: 15px;
 }
-#active-main a, #hike-main a, #hike-second a {
+footer a, #active-main a, #hike-main a, #hike-second a {
     color:#1a4147;
 }
-#active-main a:hover, #hike-main a:hover, #hike-second a:hover {
+footer a, #active-main a:hover, #hike-main a:hover, #hike-second a:hover {
     color: #b56d2f;
 }
 #active-main h4 a, #hike-main h4 a, #hike-second h4 a {

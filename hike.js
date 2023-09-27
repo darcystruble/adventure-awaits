@@ -34,7 +34,6 @@ statePicked.addEventListener('click', async () => {
                 parkNameArr.push(park.fullName)
             }
         })
-        console.log(parkNameArr)
         parkNameArr.forEach((park) => {
             parkInfo.data.data.forEach((info) => {
                 let parkLink = document.createElement('a')
@@ -75,7 +74,6 @@ statePicked.addEventListener('click', async () => {
                 parkNameArr.push(park.fullName)
             }
         })
-        console.log(parkNameArr)
         parkNameArr.forEach((park) => {
             parkInfo.data.data.forEach((info) => {
                 let parkLink = document.createElement('a')
@@ -115,7 +113,6 @@ statePicked.addEventListener('click', async () => {
                 parkNameArr2.push(park.fullName)
             }
         })
-        console.log(parkNameArr2)
         parkNameArr2.forEach((park) => {
             parkInfo.data.data.forEach((info) => {
                 let parkLink = document.createElement('a')
@@ -140,7 +137,6 @@ statePicked.addEventListener('click', async () => {
                     parkHolder.append(parkImg, parkDesignation, parkDescription, parkDirecInfo, parkDirections)
                     parkHolder.classList.add('park-holder')
                 }
-                
                 secondHike.append(parkHeader, parkHolder)
             })
         })
@@ -156,7 +152,6 @@ statePicked.addEventListener('click', async () => {
                 parkNameArr.push(park.fullName)
             }
         })
-        console.log(parkNameArr)
         parkNameArr.forEach((park) => {
             parkInfo.data.data.forEach((info) => {
                 let parkLink = document.createElement('a')
@@ -181,8 +176,45 @@ statePicked.addEventListener('click', async () => {
                     parkHolder.append(parkImg, parkDesignation, parkDescription, parkDirecInfo, parkDirections)
                     parkHolder.classList.add('park-holder')
                 }
-                
                 mainHike.append(parkHeader, parkHolder)
+            })
+        })
+        let headInfo2 = document.createElement('h2')
+        headInfo2.innerText = 'Parks with Scenic Views and Photo Spots'
+        secondHike.append(headInfo2)
+        // array
+        let parkNameArr2 = []
+        // find scenic hikes in state
+        scenic.data.data[0][0].parks.forEach((park) => {
+            if(park.states.includes(state)){
+                parkNameArr2.push(park.fullName)
+            }
+        })
+        parkNameArr2.forEach((park) => {
+            parkInfo.data.data.forEach((info) => {
+                let parkLink = document.createElement('a')
+                let parkHeader = document.createElement('h4')
+                let parkImg = document.createElement('img')
+                let parkDescription = document.createElement('div')
+                let parkDesignation = document.createElement('div')
+                let parkDirecInfo = document.createElement('div')
+                let parkDirections = document.createElement('a')
+                let parkHolder = document.createElement('div')
+                if (info.fullName === park){
+                    parkLink.innerText = info.fullName
+                    parkLink.href = info.url
+                    parkHeader.append(parkLink)
+                    parkImg.src = info.images[0].url
+                    parkImg.classList.add('float')
+                    parkDescription.innerText = info.description
+                    parkDirecInfo.innerText = info.directionsInfo
+                    parkDesignation.innerText = `Park Designation: ${info.designation}`
+                    parkDirections.innerText = `Click here for more information about directions to the park`
+                    parkDirections.href = info.directionsUrl
+                    parkHolder.append(parkImg, parkDesignation, parkDescription, parkDirecInfo, parkDirections)
+                    parkHolder.classList.add('park-holder')
+                }
+                secondHike.append(parkHeader, parkHolder)
             })
         })
     } else if (age === 'ten'){
@@ -198,7 +230,6 @@ statePicked.addEventListener('click', async () => {
                 parkNameArr.push(park.fullName)
             }
         })
-        console.log(parkNameArr)
         parkNameArr.forEach((park) => {
             parkInfo.data.data.forEach((info) => {
                 let parkLink = document.createElement('a')

@@ -193,22 +193,22 @@ button {
 #get-junior-ranger {
     margin-top: 20px;
 }
-#hike-main {
+#active-main, #hike-main, #hike-second {
     margin-bottom: 10%;
 }
-#hike-main div {
+#active-main div, #hike-main div, #hike-second div {
     margin-bottom: 15px;
 }
-#hike-main a {
+#active-main a, #hike-main a, #hike-second a {
     color:#1a4147;
 }
-#hike-main a:hover {
+#active-main a:hover, #hike-main a:hover, #hike-second a:hover {
     color: #b56d2f;
 }
-#hike-main h4 a {
+#active-main h4 a, #hike-main h4 a, #hike-second h4 a {
     font-size: 2rem;
 }
-#hike-main img {
+#active-main img, #hike-main img, #hike-second img {
     width: 250px;
 }
 
@@ -251,6 +251,9 @@ button {
     header {
         height: 35vh;
     }
+    .nav{
+        padding: 0 5px;
+    }
     .links {
        font-size: 1.5rem; 
     }
@@ -274,5 +277,8 @@ button {
     }
     .one-third, .two-thirds {
         width: 100%;
+    }
+    #active-main img, #hike-main img, #hike-second img {
+        width: 150px;
     }
 }

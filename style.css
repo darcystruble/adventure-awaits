@@ -20,6 +20,10 @@ body {
     font-size: 1.4rem;
     color: #323432;
 }
+footer {
+    padding: 20px;
+    font-size: 1.2rem;
+}
 .main-content {
     margin: auto 20px;
 }
@@ -30,7 +34,7 @@ h2 {
 }
 h3 {
     color: #1a4147;
-    font-family: Archive, sans-serif;
+    font-family: Glacial Indifference, sans-serif;
     font-size: 2rem;
 }
 h4 {
@@ -43,8 +47,10 @@ button {
     font-family: Archive, sans-serif;
 }
 
+
 /* HEADER ELEMENTS */
 header {
+    background-color: #1a4147;
     background-image: url("./assets/ganapathy-kumar-MQNWj9UeqKo-unsplash.jpg");
     background-size: cover;
     background-position: 50% 50%;
@@ -87,16 +93,12 @@ a:hover {
 a:active {
     text-shadow: #d2a246 1px 0 10px;
 }
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
 .current-page {
     color: #1a4147;
 }
 
-/* MAIN PAGE */
+
+/* MAIN PAGE ElLEMENTS */
 table, th, td {
     border: 1px solid #1a4147;
 }
@@ -106,17 +108,25 @@ table {
 td {
     text-align: center;
 }
+.main-content {
+    margin-bottom: 50px;
+    /* padding-bottom: 30px; */
+}
 .side-bar-content {
     margin-top: 30px;
     padding: 10px;
     width: 90%;
     min-height: 200px;
-    background-color: #2e737199;
+    /* background-color: #2e737199; */
+    background-color: #c5bea5;
     border-radius: 10px;
 }
 .side-bar-content p {
     font-size: 1rem;
 }
+
+
+/* IMAGE SIZING */
 #ranger-pic, #ranger-pic-2, #ranger-pic-3, #park-photo {
     max-width: 100%;
     max-height: auto;
@@ -151,7 +161,7 @@ button {
     padding-bottom: 30px;
     margin-bottom: 20px;
     margin-top: 20px;
-    background-color: #2e73714f;
+    /* background-color: #c5bea57b; */
     border-radius: 15px;
 }
 .info-box-2 {
@@ -159,7 +169,7 @@ button {
     padding-bottom: 30px;
     margin-bottom: 20px;
     margin-top: 20px;
-    border: 2px solid #2e73714f;
+    /* border: 2px solid #c5bea5; */
     border-radius: 15px;
 }
 .info-box div {
@@ -261,7 +271,8 @@ button {
         font-size: 1.1rem;
     }
     #site-logo {
-        font-size: 3rem;
+        padding: 5px;
+        font-size: 2.5rem;
     }
     header {
         height: 35vh;
@@ -273,7 +284,7 @@ button {
        font-size: 1.5rem; 
     }
     h2 {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
     h3 {
         font-size: 1.5rem;
@@ -283,12 +294,18 @@ button {
     body {
         font-size: 1rem;
     }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        /* overflow: hidden; */
+    }
     #small-column {
         flex-direction: column;
         align-items: center;
     }
     #site-logo {
         font-size: 2rem;
+        padding: 5px;
     }
     .one-third, .two-thirds {
         width: 100%;

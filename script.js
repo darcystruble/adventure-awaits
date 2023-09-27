@@ -5,15 +5,6 @@ let imageDescrip = document.querySelector('#park-descrip')
 let navBar = document.querySelector('nav')
 
 // STICKY NAV BAR
-let sticky = navBar.offsetTop
-
-navBar.addEventListener('scroll', () => {
-    if (window.scrollY >= sticky){
-        navBar.classList.add('sticky')
-    } else {
-        navBar.classList.remove('sticky')
-    }
-})
 
 // RANDOM PHOTO BOX
 const postPhoto = async () => {

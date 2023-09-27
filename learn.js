@@ -6,16 +6,6 @@ const selectBar = document.querySelector('#grade-select')
 let navBar = document.querySelector('nav')
 newDivsGoTo.innerHTML = null
 
-// STICKY NAVBAR
-let sticky = navBar.offsetTop
-
-navBar.addEventListener('scroll', () => {
-    if (window.scrollY >= sticky){
-        navBar.classList.add('sticky')
-    } else {
-        navBar.classList.remove('sticky')
-    }
-})
 
 buttonLessons.addEventListener('click', async () => {
     let answer = await axios.get('https://developer.nps.gov/api/v1/lessonplans?api_key=IY3dDsdp6sk5U4T51VeAKTqB99vPv2c4yfuWrIF5')

@@ -24,19 +24,11 @@
         </nav>
     </header>
 
-    <div class="main-content age">
+    <div class="main-content age flex column">
         <h2 id="age-header-1">Activities</h2>
         <div class="active-info">Use the search bar to find parks near you that offer different activities. <br>Click the links to view the parks website</div>
-        <!-- <select name="activity" id="activity-select" style="width: 210px">
-            <option value="09DF0950-D319-4557-A57E-04CD2F63FF42">Arts and Culture</option>
-            <option value="7CE6E935-F839-4FEC-A63E-052B1DEF39D2">Biking</option>
-            <option value="A59947B7-3376-49B4-AD02-C0423E08C5F7">Camping</option>
-            <option value="AE42B46C-E4B7-4889-A122-08FE180371AE">Fishing</option>
-            <option value="BFF8C027-7C8F-480B-A5F8-CD8CE490BFBA">Hiking</option>
-            <option value="587BB2D3-EC35-41B2-B3F7-A39E2B088AEE">Swimming</option>
-            <option value="1DFACD97-1B9C-4F5A-80F2-05593604799E">Food</option>
-    </select> -->
-    <select name="state" id="state-select" style="width: 210px">
+        <div>
+            <select name="state" id="state-select" style="width: 210px">
         <option value="none">Select a State</option>
         <option value="AL">Alabama</option>
         <option value="AK">Alaska</option>
@@ -89,10 +81,9 @@
         <option value="WV">West Virginia</option>
         <option value="WI">Wisconsin</option>
         <option value="WY">Wyoming</option>
-    </select>
-
-        <button id="get-activities">click</button>
-        <!-- <div class="activities" id="active-main"></div> -->
+            </select>
+            <button id="get-activities">click</button>
+        </div>
         <div>
             <h3>Arts and Culture</h3>
             <ul class="arts-list activities"></ul>

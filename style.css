@@ -131,10 +131,12 @@ td {
     font-size: 1.1rem;
 }
 
+
 /* Page Specific Styling */
 /* PAGES WITH SEARCH */
 #activity-select, #state-select, #age-select, #grade-select {
     padding: 10px;
+    margin-bottom: 10px;
     font-family: Glacial Indifference, sans-serif;
     font-size: 1.2rem;
     cursor: pointer;
@@ -191,11 +193,11 @@ button {
     margin-bottom: 7px;
 }
 .activities a {
-    color: #323432;
+    color: #2e7371;
     text-decoration: none;
 }
 .activities a:hover {
-    color: #2e7371;
+    color: #b56d2f;
 }
 .active-info {
     margin-bottom: 20px;

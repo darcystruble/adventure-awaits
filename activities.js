@@ -1,6 +1,5 @@
 ////////////////////////////
 // DOM ELEMENTS
-// const selectActivity = document.querySelector('#activity-select')
 const selectState = document.querySelector('#state-select')
 const button = document.querySelector('#get-activities')
 
@@ -34,6 +33,10 @@ button.addEventListener('click', async () => {
     bikingContainer.replaceChildren()
     campingContainer.replaceChildren()
     hikingContainer.replaceChildren()
+    playgroundContainer.replaceChildren()
+    snowplayContainer.replaceChildren()
+    swimmingContainer.replaceChildren()
+    foodContainer.replaceChildren()
 
     artInfo.data.data[0].parks.forEach((park) => {
         let parkNameA = document.createElement('a')
@@ -42,6 +45,7 @@ button.addEventListener('click', async () => {
             console.log(park.fullName)
             parkNameA.innerText = park.fullName
             parkNameA.href = park.url
+            parkNameA.setAttribute('target', 'blank')
             parkNameLi.append(parkNameA)
         } else {
             return
@@ -55,6 +59,7 @@ button.addEventListener('click', async () => {
             console.log(park.fullName)
             parkNameA.innerText = park.fullName
             parkNameA.href = park.url
+            parkNameA.setAttribute('target', 'blank')
             parkNameLi.append(parkNameA)
         } else {
             return
@@ -68,6 +73,7 @@ button.addEventListener('click', async () => {
             console.log(park.fullName)
             parkNameA.innerText = park.fullName
             parkNameA.href = park.url
+            parkNameA.setAttribute('target', 'blank')
             parkNameLi.append(parkNameA)
         } else {
             return
@@ -81,6 +87,7 @@ button.addEventListener('click', async () => {
             console.log(park.fullName)
             parkNameA.innerText = park.fullName
             parkNameA.href = park.url
+            parkNameA.setAttribute('target', 'blank')
             parkNameLi.append(parkNameA)
         } else {
             return
@@ -94,6 +101,7 @@ button.addEventListener('click', async () => {
             console.log(park.fullName)
             parkNameA.innerText = park.fullName
             parkNameA.href = park.url
+            parkNameA.setAttribute('target', 'blank')
             parkNameLi.append(parkNameA)
         } else {
             return
@@ -107,6 +115,7 @@ button.addEventListener('click', async () => {
             console.log(park.fullName)
             parkNameA.innerText = park.fullName
             parkNameA.href = park.url
+            parkNameA.setAttribute('target', 'blank')
             parkNameLi.append(parkNameA)
         } else {
             return
@@ -120,6 +129,7 @@ button.addEventListener('click', async () => {
             console.log(park.fullName)
             parkNameA.innerText = park.fullName
             parkNameA.href = park.url
+            parkNameA.setAttribute('target', 'blank')
             parkNameLi.append(parkNameA)
         } else {
             return
@@ -133,6 +143,7 @@ button.addEventListener('click', async () => {
             console.log(park.fullName)
             parkNameA.innerText = park.fullName
             parkNameA.href = park.url
+            parkNameA.setAttribute('target', 'blank')
             parkNameLi.append(parkNameA)
         } else {
             return
@@ -146,6 +157,7 @@ button.addEventListener('click', async () => {
             console.log(park.fullName)
             parkNameA.innerText = park.fullName
             parkNameA.href = park.url
+            parkNameA.setAttribute('target', 'blank')
             parkNameLi.append(parkNameA)
         } else {
             return

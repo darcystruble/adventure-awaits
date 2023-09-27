@@ -47,6 +47,7 @@ statePicked.addEventListener('click', async () => {
                 if (info.fullName === park){
                     parkLink.innerText = info.fullName
                     parkLink.href = info.url
+                    parkLink.setAttribute('target', 'blank')
                     parkHeader.append(parkLink)
                     parkImg.src = info.images[0].url
                     parkImg.classList.add('float')
@@ -55,6 +56,7 @@ statePicked.addEventListener('click', async () => {
                     parkDesignation.innerText = `Park Designation: ${info.designation}`
                     parkDirections.innerText = `Click here for more information about directions to the park`
                     parkDirections.href = info.directionsUrl
+                    parkDirections.setAttribute('target', 'blank')
                     parkHolder.append(parkImg, parkDesignation, parkDescription, parkDirecInfo, parkDirections)
                     parkHolder.classList.add('park-holder')
                 }
@@ -87,6 +89,7 @@ statePicked.addEventListener('click', async () => {
                 if (info.fullName === park){
                     parkLink.innerText = info.fullName
                     parkLink.href = info.url
+                    parkLink.setAttribute('target', 'blank')
                     parkHeader.append(parkLink)
                     parkImg.src = info.images[0].url
                     parkImg.classList.add('float')
@@ -95,6 +98,7 @@ statePicked.addEventListener('click', async () => {
                     parkDesignation.innerText = `Park Designation: ${info.designation}`
                     parkDirections.innerText = `Click here for more information about directions to the park`
                     parkDirections.href = info.directionsUrl
+                    parkDirections.setAttribute('target', 'blank')
                     parkHolder.append(parkImg, parkDesignation, parkDescription, parkDirecInfo, parkDirections)
                     parkHolder.classList.add('park-holder')
                 }
@@ -126,6 +130,7 @@ statePicked.addEventListener('click', async () => {
                 if (info.fullName === park){
                     parkLink.innerText = info.fullName
                     parkLink.href = info.url
+                    parkLink.setAttribute('target', 'blank')
                     parkHeader.append(parkLink)
                     parkImg.src = info.images[0].url
                     parkImg.classList.add('float')
@@ -134,6 +139,7 @@ statePicked.addEventListener('click', async () => {
                     parkDesignation.innerText = `Park Designation: ${info.designation}`
                     parkDirections.innerText = `Click here for more information about directions to the park`
                     parkDirections.href = info.directionsUrl
+                    parkDirections.setAttribute('target', 'blank')
                     parkHolder.append(parkImg, parkDesignation, parkDescription, parkDirecInfo, parkDirections)
                     parkHolder.classList.add('park-holder')
                 }
@@ -165,6 +171,7 @@ statePicked.addEventListener('click', async () => {
                 if (info.fullName === park){
                     parkLink.innerText = info.fullName
                     parkLink.href = info.url
+                    parkLink.setAttribute('target', 'blank')
                     parkHeader.append(parkLink)
                     parkImg.src = info.images[0].url
                     parkImg.classList.add('float')
@@ -173,16 +180,18 @@ statePicked.addEventListener('click', async () => {
                     parkDesignation.innerText = `Park Designation: ${info.designation}`
                     parkDirections.innerText = `Click here for more information about directions to the park`
                     parkDirections.href = info.directionsUrl
+                    parkDirections.setAttribute('target', 'blank')
                     parkHolder.append(parkImg, parkDesignation, parkDescription, parkDirecInfo, parkDirections)
                     parkHolder.classList.add('park-holder')
                 }
                 mainHike.append(parkHeader, parkHolder)
             })
         })
+         // Second Results
         let headInfo2 = document.createElement('h2')
         headInfo2.innerText = 'Parks with Scenic Views and Photo Spots'
         secondHike.append(headInfo2)
-        // array
+        // array 2
         let parkNameArr2 = []
         // find scenic hikes in state
         scenic.data.data[0][0].parks.forEach((park) => {
@@ -203,6 +212,7 @@ statePicked.addEventListener('click', async () => {
                 if (info.fullName === park){
                     parkLink.innerText = info.fullName
                     parkLink.href = info.url
+                    parkLink.setAttribute('target', 'blank')
                     parkHeader.append(parkLink)
                     parkImg.src = info.images[0].url
                     parkImg.classList.add('float')
@@ -211,6 +221,7 @@ statePicked.addEventListener('click', async () => {
                     parkDesignation.innerText = `Park Designation: ${info.designation}`
                     parkDirections.innerText = `Click here for more information about directions to the park`
                     parkDirections.href = info.directionsUrl
+                    parkDirections.setAttribute('target', 'blank')
                     parkHolder.append(parkImg, parkDesignation, parkDescription, parkDirecInfo, parkDirections)
                     parkHolder.classList.add('park-holder')
                 }
@@ -243,6 +254,7 @@ statePicked.addEventListener('click', async () => {
                 if (info.fullName === park){
                     parkLink.innerText = info.fullName
                     parkLink.href = info.url
+                    parkLink.setAttribute('target', 'blank')
                     parkHeader.append(parkLink)
                     parkImg.src = info.images[0].url
                     parkImg.classList.add('float')
@@ -251,10 +263,55 @@ statePicked.addEventListener('click', async () => {
                     parkDesignation.innerText = `Park Designation: ${info.designation}`
                     parkDirections.innerText = `Click here for more information about directions to the park`
                     parkDirections.href = info.directionsUrl
+                    parkDirections.setAttribute('target', 'blank')
                     parkHolder.append(parkImg, parkDesignation, parkDescription, parkDirecInfo, parkDirections)
                     parkHolder.classList.add('park-holder')
                 }
                 mainHike.append(parkHeader, parkHolder)
+            })
+        })
+        // Secondary Information
+        // Page Header Info
+        let headInfo2 = document.createElement('h2')
+        headInfo2.innerText = 'Other Hikes to Check Out'
+        secondHike.append(headInfo2)
+        // array
+        let parkNameArr2 = []
+        // find scenic hikes in state
+        scenic.data.data[0][0].parks.forEach((park) => {
+            if(park.states.includes(state)){
+                parkNameArr2.push(park.fullName)
+            }
+        })
+        parkNameArr.forEach((park) => {
+            parkInfo.data.data.forEach((info) => {
+                let parkLink = document.createElement('a')
+                let parkHeader = document.createElement('h4')
+                let parkImg = document.createElement('img')
+                let parkDescription = document.createElement('div')
+                let parkDesignation = document.createElement('div')
+                let parkDirecInfo = document.createElement('div')
+                let parkDirections = document.createElement('a')
+                let parkHolder = document.createElement('div')
+                if (info.fullName !== park){
+                    parkLink.innerText = info.fullName
+                    parkLink.href = info.url
+                    parkLink.setAttribute('target', 'blank')
+                    parkHeader.append(parkLink)
+                    parkImg.src = info.images[0].url
+                    parkImg.classList.add('float')
+                    parkDescription.innerText = info.description
+                    parkDirecInfo.innerText = info.directionsInfo
+                    parkDesignation.innerText = `Park Designation: ${info.designation}`
+                    parkDirections.innerText = `Click here for more information about directions to the park`
+                    parkDirections.href = info.directionsUrl
+                    parkDirections.setAttribute('target', 'blank')
+                    parkHolder.append(parkImg, parkDesignation, parkDescription, parkDirecInfo, parkDirections)
+                    parkHolder.classList.add('park-holder')
+                } else {
+                    return
+                }
+                secondHike.append(parkHeader, parkHolder)
             })
         })
     } else {

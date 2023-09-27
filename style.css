@@ -45,9 +45,9 @@ button {
 
 /* HEADER ELEMENTS */
 header {
-    background-image: url("./assets/Lassen-Volcanic-LassenPeak-ManzanitaLake_Dollar_2400.webp");
+    background-image: url("./assets/ganapathy-kumar-MQNWj9UeqKo-unsplash.jpg");
     background-size: cover;
-    background-position: 50% 0;
+    background-position: 50% 50%;
     height: 60vh;
     width: 100%;
     overflow: hidden;
@@ -185,6 +185,19 @@ button {
 .park-holder {
     margin-top: 20px;
     min-height: 310px;
+    margin-bottom: 20px;
+}
+.activities li {
+    margin-bottom: 7px;
+}
+.activities a {
+    color: #323432;
+    text-decoration: none;
+}
+.activities a:hover {
+    color: #2e7371;
+}
+.active-info {
     margin-bottom: 20px;
 }
 #ranger-content, #hike-content div {

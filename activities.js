@@ -1,60 +1,157 @@
 ////////////////////////////
 // DOM ELEMENTS
-const selectActivity = document.querySelector('#activity-select')
+// const selectActivity = document.querySelector('#activity-select')
 const selectState = document.querySelector('#state-select')
 const button = document.querySelector('#get-activities')
-const mainActive = document.querySelector('#active-main')
 
+// EACH CONTAINER
+const artsContainer = document.querySelector('.arts-list')
+const bikingContainer = document.querySelector('.biking-list')
+const campingContainer = document.querySelector('.camping-list')
+const fishingContainer = document.querySelector('.fishing-list')
+const hikingContainer = document.querySelector('.hiking-list')
+const playgroundContainer = document.querySelector('.playground-list')
+const snowplayContainer = document.querySelector('.snow-list')
+const swimmingContainer = document.querySelector('.swim-list')
+const foodContainer = document.querySelector('.food-list')
 
 // EVENT LISTENER & FUNCTION
-// Get parkCode name function
 
 button.addEventListener('click', async () => {
-    mainActive.replaceChildren()
     let currentState = selectState.value
-    let currentActivity = selectActivity.value
-    console.log(currentActivity)
-    
-    const information = await axios.get(`https://developer.nps.gov/api/v1/activities/parks?id=${currentActivity}&api_key=IY3dDsdp6sk5U4T51VeAKTqB99vPv2c4yfuWrIF5`)
-    const parkInfo = await axios.get(`https://developer.nps.gov/api/v1/parks?stateCode=${currentState}&q=hiking&api_key=IY3dDsdp6sk5U4T51VeAKTqB99vPv2c4yfuWrIF5`)
-    console.log(information, parkInfo)
-    // State Array
-    let stateParkCode = []
-    information.data.data[0].parks.forEach((item) => {
-        if (item.states === currentState){
-            stateParkCode.push(item.parkCode)
+    const artInfo = await axios.get(`https://developer.nps.gov/api/v1/activities/parks?id=09DF0950-D319-4557-A57E-04CD2F63FF42&api_key=IY3dDsdp6sk5U4T51VeAKTqB99vPv2c4yfuWrIF5`)
+    const bikingInfo = await axios.get(`https://developer.nps.gov/api/v1/activities/parks?id=7CE6E935-F839-4FEC-A63E-052B1DEF39D2&api_key=IY3dDsdp6sk5U4T51VeAKTqB99vPv2c4yfuWrIF5`)
+    const campingInfo = await axios.get(`https://developer.nps.gov/api/v1/activities/parks?id=A59947B7-3376-49B4-AD02-C0423E08C5F7&api_key=IY3dDsdp6sk5U4T51VeAKTqB99vPv2c4yfuWrIF5`)
+    const fishingInfo = await axios.get(`https://developer.nps.gov/api/v1/activities/parks?id=AE42B46C-E4B7-4889-A122-08FE180371AE&api_key=IY3dDsdp6sk5U4T51VeAKTqB99vPv2c4yfuWrIF5`)
+    const hikingInfo = await axios.get(`https://developer.nps.gov/api/v1/activities/parks?id=BFF8C027-7C8F-480B-A5F8-CD8CE490BFBA&api_key=IY3dDsdp6sk5U4T51VeAKTqB99vPv2c4yfuWrIF5`)
+    const playgroundInfo = await axios.get(`https://developer.nps.gov/api/v1/activities/parks?id=7779241F-A70B-49BC-86F0-829AE332C708&api_key=IY3dDsdp6sk5U4T51VeAKTqB99vPv2c4yfuWrIF5`)
+    const snowplayInfo = await axios.get(`https://developer.nps.gov/api/v1/activities/parks?id=C38B3C62-1BBF-4EA1-A1A2-35DE21B74C17&api_key=IY3dDsdp6sk5U4T51VeAKTqB99vPv2c4yfuWrIF5`)
+    const swimmingInfo = await axios.get(`https://developer.nps.gov/api/v1/activities/parks?id=587BB2D3-EC35-41B2-B3F7-A39E2B088AEE&api_key=IY3dDsdp6sk5U4T51VeAKTqB99vPv2c4yfuWrIF5`)
+    const foodInfo = await axios.get(`https://developer.nps.gov/api/v1/activities/parks?id=1DFACD97-1B9C-4F5A-80F2-05593604799E&api_key=IY3dDsdp6sk5U4T51VeAKTqB99vPv2c4yfuWrIF5`)
+
+    // remove old serach answers
+    artsContainer.replaceChildren()
+    bikingContainer.replaceChildren()
+    campingContainer.replaceChildren()
+    hikingContainer.replaceChildren()
+
+    artInfo.data.data[0].parks.forEach((park) => {
+        let parkNameA = document.createElement('a')
+        let parkNameLi = document.createElement('li')
+        if(park.states === currentState){
+            console.log(park.fullName)
+            parkNameA.innerText = park.fullName
+            parkNameA.href = park.url
+            parkNameLi.append(parkNameA)
+        } else {
+            return
         }
+        artsContainer.append(parkNameLi)
     })
-    let headInfo = document.createElement('h2')
-    headInfo.innerText = `Hi`
-    mainActive.append(headInfo)
-    stateParkCode.forEach((code) => {
-        parkInfo.data.data.forEach((park) => {
-            let parkLink = document.createElement('a')
-            let parkHeader = document.createElement('h4')
-            let parkImg = document.createElement('img')
-            let parkDescription = document.createElement('div')
-            let parkDesignation = document.createElement('div')
-            let parkDirecInfo = document.createElement('div')
-            let parkDirections = document.createElement('a')
-            let parkHolder = document.createElement('div')
-            if(park.parkCode === code){
-                console.log(code)
-                parkLink.innerText = park.fullName
-                parkLink.href = park.url
-                parkHeader.append(parkLink)
-                parkImg.src = park.images[0].url
-                parkImg.classList.add('float')
-                parkDescription.innerText = park.description
-                parkDirecInfo.innerText = park.directionsInfo
-                parkDesignation.innerText = `Park Designation: ${park.designation}`
-                parkDirections.innerText = `Click here for more information about directions to the park`
-                parkDirections.href = park.directionsUrl
-                parkHolder.append(parkImg, parkDesignation, parkDescription, parkDirecInfo, parkDirections)
-                parkHolder.classList.add('park-holder')
-            }
-            mainActive.append(parkHeader, parkHolder)
-        })
-        
+    bikingInfo.data.data[0].parks.forEach((park) => {
+        let parkNameA = document.createElement('a')
+        let parkNameLi = document.createElement('li')
+        if(park.states === currentState){
+            console.log(park.fullName)
+            parkNameA.innerText = park.fullName
+            parkNameA.href = park.url
+            parkNameLi.append(parkNameA)
+        } else {
+            return
+        }
+        bikingContainer.append(parkNameLi)
     })
+    campingInfo.data.data[0].parks.forEach((park) => {
+        let parkNameA = document.createElement('a')
+        let parkNameLi = document.createElement('li')
+        if(park.states === currentState){
+            console.log(park.fullName)
+            parkNameA.innerText = park.fullName
+            parkNameA.href = park.url
+            parkNameLi.append(parkNameA)
+        } else {
+            return
+        }
+        campingContainer.append(parkNameLi)
+    })
+    fishingInfo.data.data[0].parks.forEach((park) => {
+        let parkNameA = document.createElement('a')
+        let parkNameLi = document.createElement('li')
+        if(park.states === currentState){
+            console.log(park.fullName)
+            parkNameA.innerText = park.fullName
+            parkNameA.href = park.url
+            parkNameLi.append(parkNameA)
+        } else {
+            return
+        }
+        fishingContainer.append(parkNameLi)
+    })
+    hikingInfo.data.data[0].parks.forEach((park) => {
+        let parkNameA = document.createElement('a')
+        let parkNameLi = document.createElement('li')
+        if(park.states === currentState){
+            console.log(park.fullName)
+            parkNameA.innerText = park.fullName
+            parkNameA.href = park.url
+            parkNameLi.append(parkNameA)
+        } else {
+            return
+        }
+        hikingContainer.append(parkNameLi)
+    })
+    playgroundInfo.data.data[0].parks.forEach((park) => {
+        let parkNameA = document.createElement('a')
+        let parkNameLi = document.createElement('li')
+        if(park.states === currentState){
+            console.log(park.fullName)
+            parkNameA.innerText = park.fullName
+            parkNameA.href = park.url
+            parkNameLi.append(parkNameA)
+        } else {
+            return
+        }
+        playgroundContainer.append(parkNameLi)
+    })
+    snowplayInfo.data.data[0].parks.forEach((park) => {
+        let parkNameA = document.createElement('a')
+        let parkNameLi = document.createElement('li')
+        if(park.states === currentState){
+            console.log(park.fullName)
+            parkNameA.innerText = park.fullName
+            parkNameA.href = park.url
+            parkNameLi.append(parkNameA)
+        } else {
+            return
+        }
+        snowplayContainer.append(parkNameLi)
+    })
+    swimmingInfo.data.data[0].parks.forEach((park) => {
+        let parkNameA = document.createElement('a')
+        let parkNameLi = document.createElement('li')
+        if(park.states === currentState){
+            console.log(park.fullName)
+            parkNameA.innerText = park.fullName
+            parkNameA.href = park.url
+            parkNameLi.append(parkNameA)
+        } else {
+            return
+        }
+        swimmingContainer.append(parkNameLi)
+    })
+    foodInfo.data.data[0].parks.forEach((park) => {
+        let parkNameA = document.createElement('a')
+        let parkNameLi = document.createElement('li')
+        if(park.states === currentState){
+            console.log(park.fullName)
+            parkNameA.innerText = park.fullName
+            parkNameA.href = park.url
+            parkNameLi.append(parkNameA)
+        } else {
+            return
+        }
+        foodContainer.append(parkNameLi)
+    })
+
 })
+

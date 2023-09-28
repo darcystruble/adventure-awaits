@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Big Adventures with Little Kids</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src=".js/script.js" defer></script>
+    <script src="./js/script.js" defer></script>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
             <ul class="flex flex-end">
                 <li class="nav"><a href="./index.html" class="links current-page">Home</a></li>
                 <li class="nav" id="btn-hike"><a href="./pages/hike.html" class="links">Hike</a></li>
-                <li class="nav" id="btn-backpack"><a href="./pages/junior-ranger.html" class="links">JuniorRanger</a></li>
+                <li class="nav" id="btn-backpack"><a href="./pages/junior-ranger.html" class="links">Junior Ranger</a></li>
                 <li class="nav"><a href="./pages/activities.html" class="links">Activites</a></li>
                 <li class="nav" id="btn-learn"><a href="./pages/learn.html" class="links">Learn</a></li>
             </ul>
@@ -29,17 +29,30 @@
         <!-- main content -->
         <div class="flex space-between" id="small-column">
             <div class="two-thirds">
-                <h3>Header</h3>
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis aperiam eos reiciendis, ipsam, nisi ab perspiciatis aut illo voluptatem a architecto harum at qui omnis dolorum fuga sunt? Quam, nesciunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam culpa delectus eaque facilis rerum voluptas dicta repudiandae reprehenderit nulla consequuntur quia animi, optio quaerat non architecto nemo ratione pariatur. Dolore.</div>
-                <h3>Header</h3>
-                <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, fugit neque? Pariatur quaerat mollitia perferendis possimus dicta repellendus iure quam tempora distinctio quia saepe, reiciendis voluptas architecto nisi explicabo expedita?</div>
-                <h3>Header</h3>
-                <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis maxime quidem ducimus accusamus, magni possimus reiciendis recusandae eligendi, quisquam omnis nobis molestias! Atque voluptatem obcaecati placeat, magnam commodi soluta quisquam.</div>
+                <h3>How to use this site</h3>
+                <div>
+                    Navigate through our 4 main sections to help you find fun adventures for your littlest exporer!
+                    <ul>
+                        <li><b>Hikes</b> are devided out into 4 age group sections. The results will help you find hikes that your explorer will love!</li>
+                        <li><b>Junior Ranger</b> will let you search for parks with Junior Ranger at parks near you.</li>
+                        <li><b>Activites</b> breaks down a selection of fun, kid friendly acticties and shows you results in your area.</li>
+                        <li><b>Lessons</b> will give you lesson plans for three different age group categories. Whether you are a teacher, a home-schooler or just looking for ways to get your kids interested in nature, there is something here for you!</li>
+                    </ul>
+                </div>
+                <h3 id="love-header"></h3>
+                <div id="love-text"></div>
+                <div><a href="" id="love-link" target="blank"></a></div>
+                <h3 id="citizen-sci">Citizen Science at Cabrillo National Monument</h3>
+                <div>
+                    <img src="" alt="" id="citizen-img" class="float">
+                    <div id="citizen-text"></div>
+                    <div><a href="" target="blank" id="citizen-link" target="blank"></a></div>
+                </div>
             </div>
 
             <div class="image-container one-third">
                 <div class="side-bar-content flex column align-items">
-                    <h4>Quick Tips:</h4>
+                    <h4 id="quick-tips">Quick Tips</h4>
                     <p>Each child has unique abilites. Assume the lowest number of miles and add miles as their confortability with hiking grows.</p>
                     <table>
                         <tr>
@@ -66,6 +79,10 @@
                 </div>
 
                 <div class="side-bar-content">
+                    <h4 id="kids-title"></h4>
+                    <img src="" alt="" id="kids-photo">
+                    <div id="kids-descrip"></div>
+                    <div><a href="" id="kids-link" target="blank"></a></div>
                 </div>
 
                 <div class="side-bar-content">

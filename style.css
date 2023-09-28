@@ -27,13 +27,14 @@ footer {
     padding: 20px;
     font-size: 1.2rem;
 }
-.main-content {
+.second-content, .third-content {
     margin: auto 20px;
 }
 h2 {
     color: #1a4147;
+    text-shadow: 3px 3px #d2a246;
     font-family: Archive, sans-serif;
-    font-size: 2.5rem;
+    font-size: 2.7rem;
 }
 h3 {
     color: #1a4147;
@@ -119,15 +120,19 @@ td {
 }
 .main-content {
     margin-bottom: 50px;
-    /* padding-bottom: 30px; */
+    padding-bottom: 30px;
+    position: relative;
+}
+.second-margin-top {
+    margin-top: 20px;
 }
 .side-bar-content {
     margin-top: 30px;
     padding: 10px;
     width: 90%;
     min-height: 200px;
-    /* background-color: #2e737199; */
-    background-color: #c5bea5;
+    background-color: #c8c1ac;
+    box-shadow: 5px 5px 15px 5px #aaa493;
     border-radius: 10px;
 }
 .side-bar-content p {
@@ -135,6 +140,37 @@ td {
 }
 .side-bar-content a {
     font-size: 1rem;
+}
+.curve {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.curve svg {
+    position: relative;
+    display: block;
+    width: calc(112% + 1.3px);
+    height: 97px;
+}
+
+.curve .shape-fill {
+    fill: #d2a1468b;
+}
+.second-info {
+    margin-top: 50px;
+}
+.third-info {
+    margin-top: 40px;
+}
+#learn-header-1, #age-header-1, #state-header-1 {
+    position: relative;
+    margin: 0;
+    padding: 20px 10px 20px 20px;
+    background-color: #d2a1468b;
 }
 #kids-title, #quick-tips {
     margin-top: 0;

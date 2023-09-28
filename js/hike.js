@@ -293,50 +293,11 @@ statePicked.addEventListener('click', async () => {
                 }
                 mainHike.append(parkHeader, parkHolder)
             })
-            if (mainHike.querySelectorAll('div').length < 3) {
-                let noParkFound = document.createElement('div')
-                noParkFound.innerText = 'No results found. Search again.'
-                mainHike.append(noParkFound)
-            }
         })
-        // Secondary Information
-        // Page Header Info
-        let headInfo2 = document.createElement('h2')
-        headInfo2.innerText = 'All Parks with Hiking'
-        secondHike.append(headInfo2)
-        parkInfo.data.data.forEach((info) => {
-            let parkLink = document.createElement('a')
-            let parkHeader = document.createElement('h4')
-            let parkImg = document.createElement('img')
-            let parkDescription = document.createElement('div')
-            let parkDesignation = document.createElement('div')
-            let parkDirecInfo = document.createElement('div')
-            let parkDirections = document.createElement('a')
-            let parkHolder = document.createElement('div')
-            if (info.states.includes(state)) {
-                parkLink.innerText = info.fullName
-                parkLink.href = info.url
-                parkLink.setAttribute('target', 'blank')
-                parkHeader.append(parkLink)
-                parkImg.src = info.images[0].url
-                parkImg.classList.add('float')
-                parkDescription.innerText = info.description
-                parkDirecInfo.innerText = info.directionsInfo
-                parkDesignation.innerText = `Park Designation: ${info.designation}`
-                parkDirections.innerText = `Click here for more information about directions to the park`
-                parkDirections.href = info.directionsUrl
-                parkDirections.setAttribute('target', 'blank')
-                parkHolder.append(parkImg, parkDesignation, parkDescription, parkDirecInfo, parkDirections)
-                parkHolder.classList.add('park-holder')
-            } else {
-                return
-            }
-            secondHike.append(parkHeader, parkHolder)
-        })
-        if (secondHike.querySelectorAll('div').length < 3) {
+        if (mainHike.querySelectorAll('div').length < 3) {
             let noParkFound = document.createElement('div')
             noParkFound.innerText = 'No results found. Search again.'
-            secondHike.append(noParkFound)
+            mainHike.append(noParkFound)
         }
     } else {
         return

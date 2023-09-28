@@ -8,10 +8,13 @@
 let loveHeader = document.querySelector('#love-header')
 let loveText = document.querySelector('#love-text')
 let loveLink = document.querySelector('#love-link')
-let titleCitizen = document.querySelector('#citizen-sci')
+
 let citizenImg = document.querySelector('#citizen-img')
 let textCitizen = document.querySelector('#citizen-text')
 let linkCitizen = document.querySelector('#citizen-link')
+let birdImg = document.querySelector('#bird-img')
+let textBird = document.querySelector('#bird-text')
+let linkBird = document.querySelector('#bird-link')
 let titleKids = document.querySelector('#kids-title')
 let imageKids = document.querySelector('#kids-photo')
 let kidsDescrip = document.querySelector('#kids-descrip')
@@ -41,6 +44,11 @@ const importanceOfNature = async () => {
     loveText.innerText = articles.data.data[41].listingDescription
     loveLink.href = articles.data.data[41].url
     loveLink.innerText = 'Read More'
+    // bird watching
+    birdImg.src = articles.data.data[32].listingImage.url
+    textBird.innerText = articles.data.data[32].listingDescription
+    linkBird.innerText = 'Read More'
+    linkBird.href = articles.data.data[32].url
 }
 
 
@@ -50,7 +58,6 @@ const postPhoto = async () => {
     imageParks.src = `${newPhoto.data.data[random].images[0].url}`
     imageParks.alt = `${newPhoto.data.data[random].images[0].altText}`
     imageDescrip.innerText = newPhoto.data.data[random].images[0].description
-    
 }
 importanceOfNature()
 postPhoto()

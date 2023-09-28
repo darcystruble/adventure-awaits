@@ -11,22 +11,26 @@
 </head>
 
 <body>
+    <nav>
+        <a href="../index.html" class="links">Home</a>
+        <a href="./hike.html" class="links">Hike</a>
+        <a href="./junior-ranger.html" class="links">Junior Ranger</a>
+        <a href="./activities.html" class="links">Activites</a>
+        <a href="./learn.html" class="links current-page">Learn</a>
+    </nav>
     <header class="flex column">
         <h1 id="site-logo">Big Adventures <br /> with Little Kids</h1>
     </header>
-    <nav>
-        <ul class="flex flex-end">
-            <li class="nav"><a href="../index.html" class="links">Home</a></li>
-            <li class="nav" id="btn-hike"><a href="./hike.html" class="links">Hike</a></li>
-            <li class="nav" id="btn-backpack"><a href="./junior-ranger.html" class="links">Junior Ranger</a></li>
-            <li class="nav"><a href="./activities.html" class="links">Activities</a></li>
-            <li class="nav" id="btn-learn"><a href="./learn.html" class="links current-page">Learn</a></li>
-        </ul>
-    </nav>
 
-    <div class="main-content learn">
+    <div class="main-content learn triangle-header">
         <h2 id="learn-header-1">Lesson Plans</h2>
-        <div class="second-content second-margin-top">
+        <div class="triangle">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </div>
+        <div class="second-content">
         <select name="grade" id="grade-select" style="width: 210px">
             <option value="pick">Select Grade Level</option>
             <option value="pre">Pre-K - 2nd Grade</option>
@@ -35,7 +39,6 @@
         </select>
         <button id="get-lessons">click</button>
         <div id="learn-content"></div>
-    </div>
     </div>
 
     <footer>All information is from the National Parks Api. <a

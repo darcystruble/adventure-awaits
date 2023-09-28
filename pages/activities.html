@@ -11,22 +11,26 @@
 </head>
 
 <body>
+    <nav>
+        <a href="../index.html" class="links">Home</a>
+        <a href="./hike.html" class="links">Hike</a>
+        <a href="./junior-ranger.html" class="links">Junior Ranger</a>
+        <a href="./activities.html" class="links current-page">Activites</a>
+        <a href="./learn.html" class="links">Learn</a>
+    </nav>
     <header class="flex column">
         <h1 id="site-logo">Big Adventures <br /> with Little Kids</h1>
     </header>
-    <nav>
-        <ul class="flex flex-end">
-            <li class="nav"><a href="../index.html" class="links">Home</a></li>
-            <li class="nav" id="btn-hike"><a href="./hike.html" class="links">Hike</a></li>
-            <li class="nav" id="btn-backpack"><a href="./junior-ranger.html" class="links">Junior Ranger</a></li>
-            <li class="nav"><a href="./activities.html" class="links current-page">Activities</a></li>
-            <li class="nav" id="btn-learn"><a href="./learn.html" class="links">Learn</a></li>
-        </ul>
-    </nav>
 
-    <div class="main-content age flex column">
+    <div class="main-content age triangle-header">
         <h2 id="age-header-1">Activities</h2>
-        <div class="second-content second-margin-top">
+        <div class="triangle">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z" class="shape-fill"></path>
+            </svg>
+        </div>    
+    </div>
+        <div class="second-content">
         <div class="active-info">Use the search bar to find parks near you that offer different activities. <br>Click
             the links to view the parks website</div>
         <div>
@@ -122,7 +126,6 @@
             <h3>Food</h3>
             <ul class="food-list activities"></ul>
         </div>
-    </div>
     </div>
 
     <footer>All information is from the National Parks Api. <a

@@ -52,30 +52,6 @@ a:hover {
     margin: auto 20px;
 }
 
-/* HEADER ELEMENTS */
-header {
-    background-color: #1a4147;
-    background-image: url("./assets/ganapathy-kumar-MQNWj9UeqKo-unsplash.jpg");
-    background-size: cover;
-    background-position: 50% 50%;
-    height: 40vh;
-    width: 100%;
-    overflow: hidden;
-}
-
-#site-logo {
-    margin: auto 20px;
-    padding: 15px;
-    width: fit-content;
-    background-color: #2e73717b;
-    border-radius: 20px;
-    color: #b56d2f;
-    text-shadow: #d2a246 2px 2px;
-    font-family: Archive, sans-serif;
-    font-size: 4rem;
-}
-
-
 /* NAV-BAR */
 nav {
     background-color: #2e7371;
@@ -83,6 +59,11 @@ nav {
     justify-content: flex-end;
     list-style: none;
     padding: 10px;
+    position: fixed;
+    min-width: 100%;
+    right: 0px;
+    top: 0px;
+    z-index: 99;
 }
 
 .links {
@@ -102,12 +83,31 @@ nav a:active {
     color: #1a4147;
 }
 
-/* ALL PAGES */
-.main-content {
-    margin-bottom: 50px;
-    padding-bottom: 30px;
-    position: relative;
+/* HEADER ELEMENTS */
+header {
+    background-color: #edcc8e;
+    background-image: url("./assets/ganapathy-kumar-MQNWj9UeqKo-unsplash.jpg");
+    /* background: linear-gradient(#edcc8e00 90%, #edcc8e 100%); */
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 60vh;
+    width: 100%;
+    overflow: hidden;
 }
+
+#site-logo {
+    margin: auto 20px;
+    padding: 15px;
+    width: fit-content;
+    background-color: #2e73717b;
+    border-radius: 20px;
+    color: #b56d2f;
+    text-shadow: #d2a246 2px 2px;
+    font-family: Archive, sans-serif;
+    font-size: 4rem;
+}
+
+/* ALL PAGES */
 .side-bar-content {
     display: flex;
     flex-direction: column;
@@ -140,6 +140,12 @@ table {
 td {
     text-align: center;
 }
+/* curve settings */
+.main-content {
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    position: relative;
+}
 .curve {
     position: absolute;
     top: 0;
@@ -161,22 +167,17 @@ td {
     display: flex;
     justify-content: space-between;
 }
-.second-margin-top {
-    margin-top: 20px;
-}
 .second-info {
     margin-top: 100px;
 }
 .third-info {
     margin-top: 80px;
 }
-#learn-header-1, 
-#age-header-1, 
+ 
 #state-header-1 {
     position: relative;
     margin: 0;
     padding: 20px 10px 20px 25px;
-    /* background-color: #d2a1468b; */
     background-color: #edcc8e;
 }
 #kids-title, #quick-tips {
@@ -200,6 +201,37 @@ td {
 
 /* Page Specific Styling */
 /* PAGES WITH SEARCH */
+/* triangle */
+.triangle-header {
+    min-height: 150px;
+    position: relative;
+    /* background-color: #edcc8e; */
+    background-color: #1a4147;
+    padding: 1px 20px 50px 20px;
+}
+.triangle-header h2 {
+    color: #d2a246;
+    text-shadow: none;
+}
+.triangle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.triangle svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 76px;
+}
+
+.triangle .shape-fill {
+    fill: #e6dfc7;
+}
 #activity-select, #state-select, #age-select, #grade-select {
     padding: 10px;
     margin-bottom: 10px;
@@ -285,7 +317,7 @@ footer a, #active-main a, #hike-main a, #hike-second a {
 #active-main h4 a, #hike-main h4 a, #hike-second h4 a {
     font-size: 2rem;
 }
-#active-main img, #hike-main img, #hike-second img, #citizen-img {
+#active-main img, #hike-main img, #hike-second img, #citizen-img, #bird-img {
     width: 250px;
     box-shadow: 3px 3px 5px #aaa493;
 }

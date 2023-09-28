@@ -11,22 +11,26 @@
 </head>
 
 <body>
+    <nav>
+        <a href="../index.html" class="links">Home</a>
+        <a href="./hike.html" class="links current-page">Hike</a>
+        <a href="./junior-ranger.html" class="links">Junior Ranger</a>
+        <a href="./activities.html" class="links">Activites</a>
+        <a href="./learn.html" class="links">Learn</a>
+    </nav>
     <header class="flex column">
         <h1 id="site-logo">Big Adventures <br /> with Little Kids</h1>
     </header>
-    <nav>
-        <ul class="flex flex-end">
-            <li class="nav"><a href="../index.html" class="links">Home</a></li>
-            <li class="nav" id="btn-hike"><a href=".s/hike.html" class="links current-page">Hike</a></li>
-            <li class="nav" id="btn-backpack"><a href="./junior-ranger.html" class="links">Junior Ranger</a></li>
-            <li class="nav"><a href="./activities.html" class="links">Activities</a></li>
-            <li class="nav" id="btn-learn"><a href="./learn.html" class="links">Learn</a></li>
-        </ul>
-    </nav>
 
-    <div class="main-content age">
+    <div class="age triangle-header">
         <h2 id="age-header-1">Hikes</h2>
-        <div class="second-content second-margin-top">
+        <div class="triangle">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </div>
+        <div class="second-content">
             <select name="age" id="age-select" style="width: 280px">
                 <option value="pick">Age of Youngest Adventurer</option>
                 <option value="one">0-1 (Stroller friendly)</option>
@@ -93,9 +97,6 @@
             <div class="hike" id="hike-main"></div>
             <div class="hike" id="hike-second"></div>
         </div>
-    </div>
-
-
 
     <footer>All information is from the National Parks Api. <a
             href="https://www.nps.gov/subjects/developer/api-documentation.htm" target="blank">Click here for more

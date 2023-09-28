@@ -28,6 +28,7 @@ The landing page offers brief description of how to use the page as well as info
 National Parks API
 - https://www.nps.gov/subjects/developer/api-documentation.htm#/
 
+Other websites referenced:
 https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute
 https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/
 https://fireship.io/lessons/wavy-backgrounds/

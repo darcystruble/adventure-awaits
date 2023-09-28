@@ -22,6 +22,7 @@ The landing page offers brief description of how to use the page as well as info
 
 ## Link to Finished Website
 
+https://bigadventureswithlittlekids.surge.sh/
 bigadventureswithlittlekids.surge.sh
 
 

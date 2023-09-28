@@ -42,7 +42,6 @@ button.addEventListener('click', async () => {
         let parkNameA = document.createElement('a')
         let parkNameLi = document.createElement('li')
         if(park.states === currentState){
-            console.log(park.fullName)
             parkNameA.innerText = park.fullName
             parkNameA.href = park.url
             parkNameA.setAttribute('target', 'blank')
@@ -52,11 +51,16 @@ button.addEventListener('click', async () => {
         }
         artsContainer.append(parkNameLi)
     })
+    if (artsContainer.querySelectorAll('li').length === 0) {
+        let noParkFound = document.createElement('li')
+        noParkFound.innerText = 'No results found.'
+        artsContainer.append(noParkFound)
+    }
+    
     bikingInfo.data.data[0].parks.forEach((park) => {
         let parkNameA = document.createElement('a')
         let parkNameLi = document.createElement('li')
         if(park.states === currentState){
-            console.log(park.fullName)
             parkNameA.innerText = park.fullName
             parkNameA.href = park.url
             parkNameA.setAttribute('target', 'blank')
@@ -66,6 +70,12 @@ button.addEventListener('click', async () => {
         }
         bikingContainer.append(parkNameLi)
     })
+    if (bikingContainer.querySelectorAll('li').length === 0) {
+        let noParkFound = document.createElement('li')
+        noParkFound.innerText = 'No results found.'
+        bikingContainer.append(noParkFound)
+    }
+
     campingInfo.data.data[0].parks.forEach((park) => {
         let parkNameA = document.createElement('a')
         let parkNameLi = document.createElement('li')
@@ -80,6 +90,12 @@ button.addEventListener('click', async () => {
         }
         campingContainer.append(parkNameLi)
     })
+    if (campingContainer.querySelectorAll('li').length === 0) {
+        let noParkFound = document.createElement('li')
+        noParkFound.innerText = 'No results found.'
+        campingContainer.append(noParkFound)
+    }
+
     fishingInfo.data.data[0].parks.forEach((park) => {
         let parkNameA = document.createElement('a')
         let parkNameLi = document.createElement('li')
@@ -94,6 +110,12 @@ button.addEventListener('click', async () => {
         }
         fishingContainer.append(parkNameLi)
     })
+    if (fishingContainer.querySelectorAll('li').length === 0) {
+        let noParkFound = document.createElement('li')
+        noParkFound.innerText = 'No results found.'
+        fishingContainer.append(noParkFound)
+    }
+
     hikingInfo.data.data[0].parks.forEach((park) => {
         let parkNameA = document.createElement('a')
         let parkNameLi = document.createElement('li')
@@ -108,6 +130,12 @@ button.addEventListener('click', async () => {
         }
         hikingContainer.append(parkNameLi)
     })
+    if (hikingContainer.querySelectorAll('li').length === 0) {
+        let noParkFound = document.createElement('li')
+        noParkFound.innerText = 'No results found.'
+        hikingContainer.append(noParkFound)
+    }
+
     playgroundInfo.data.data[0].parks.forEach((park) => {
         let parkNameA = document.createElement('a')
         let parkNameLi = document.createElement('li')
@@ -122,6 +150,12 @@ button.addEventListener('click', async () => {
         }
         playgroundContainer.append(parkNameLi)
     })
+    if (playgroundContainer.querySelectorAll('li').length === 0) {
+        let noParkFound = document.createElement('li')
+        noParkFound.innerText = 'No results found.'
+        playgroundContainer.append(noParkFound)
+    }
+
     snowplayInfo.data.data[0].parks.forEach((park) => {
         let parkNameA = document.createElement('a')
         let parkNameLi = document.createElement('li')
@@ -136,6 +170,12 @@ button.addEventListener('click', async () => {
         }
         snowplayContainer.append(parkNameLi)
     })
+    if (snowplayContainer.querySelectorAll('li').length === 0) {
+        let noParkFound = document.createElement('li')
+        noParkFound.innerText = 'No results found.'
+        snowplayContainer.append(noParkFound)
+    }
+
     swimmingInfo.data.data[0].parks.forEach((park) => {
         let parkNameA = document.createElement('a')
         let parkNameLi = document.createElement('li')
@@ -150,6 +190,12 @@ button.addEventListener('click', async () => {
         }
         swimmingContainer.append(parkNameLi)
     })
+    if (swimmingContainer.querySelectorAll('li').length === 0) {
+        let noParkFound = document.createElement('li')
+        noParkFound.innerText = 'No results found.'
+        swimmingContainer.append(noParkFound)
+    }
+    
     foodInfo.data.data[0].parks.forEach((park) => {
         let parkNameA = document.createElement('a')
         let parkNameLi = document.createElement('li')
@@ -164,6 +210,10 @@ button.addEventListener('click', async () => {
         }
         foodContainer.append(parkNameLi)
     })
-
+    if (foodContainer.querySelectorAll('li').length === 0) {
+        let noParkFound = document.createElement('li')
+        noParkFound.innerText = 'No results found.'
+        foodContainer.append(noParkFound)
+    }
 })
 

@@ -47,9 +47,31 @@ a {
 a:hover {
     color: #b56d2f;
 }
+footer {
+    margin-top: 100px;
+}
 .second-content, 
 .third-content {
     margin: auto 20px;
+    padding-top: 20px;
+}
+.side-bar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    padding: 10px;
+    width: 90%;
+    min-height: 200px;
+    background-color: #c8c1ac;
+    box-shadow: 5px 5px 15px 5px #aaa493;
+    border-radius: 10px;
+}
+.side-bar-content p {
+    font-size: 1rem;
+}
+.side-bar-content a {
+    font-size: 1rem;
 }
 
 /* NAV-BAR */
@@ -93,6 +115,8 @@ header {
     height: 60vh;
     width: 100%;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 #site-logo {
@@ -105,26 +129,6 @@ header {
     text-shadow: #d2a246 2px 2px;
     font-family: Archive, sans-serif;
     font-size: 4rem;
-}
-
-/* ALL PAGES */
-.side-bar-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-    padding: 10px;
-    width: 90%;
-    min-height: 200px;
-    background-color: #c8c1ac;
-    box-shadow: 5px 5px 15px 5px #aaa493;
-    border-radius: 10px;
-}
-.side-bar-content p {
-    font-size: 1rem;
-}
-.side-bar-content a {
-    font-size: 1rem;
 }
 
 
@@ -140,7 +144,7 @@ table {
 td {
     text-align: center;
 }
-/* curve settings */
+/* CURVE SETTINGS */
 .main-content {
     margin-bottom: 50px;
     padding-bottom: 30px;
@@ -201,12 +205,12 @@ td {
 
 /* Page Specific Styling */
 /* PAGES WITH SEARCH */
-/* triangle */
+
+/* TRIANGLE */
 .triangle-header {
     min-height: 150px;
     position: relative;
-    /* background-color: #edcc8e; */
-    background-color: #1a4147;
+    background-color: #2e7371;
     padding: 1px 20px 50px 20px;
 }
 .triangle-header h2 {
@@ -221,17 +225,16 @@ td {
     overflow: hidden;
     line-height: 0;
 }
-
 .triangle svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
     height: 76px;
 }
-
 .triangle .shape-fill {
     fill: #e6dfc7;
 }
+/* selection bar and button */
 #activity-select, #state-select, #age-select, #grade-select {
     padding: 10px;
     margin-bottom: 10px;
@@ -252,13 +255,13 @@ button {
     color: #d2a246;
     padding: 10px;
 }
-
 button:hover {
     /* background-color: #46adaa; */
     border-color: #b56d2f;
     background-color: #d2a246;
     color: #1a4147;
 }
+/* boxes holding text content */
 .info-box, .info-box-2 {
     padding: 10px;
     padding-bottom: 30px;
@@ -323,34 +326,24 @@ footer a, #active-main a, #hike-main a, #hike-second a {
 }
 
 
-/* FLEX */
-.flex {
+/* JUNIOR RANGER */
+.junior-ranger {
     display: flex;
+    justify-content: space-between;
 }
-.column {
-    flex-direction: column;
-}
-.flex-end {
-    justify-content: flex-end;
-}
-.justify-content {
-    justify-content: center;
-}
-.align-items {
-    align-items: center;
-}
+
+
+/* FLEX SPACING */
+
 .two-thirds {
     width: 66%;
 }
 .one-third {
     width: 33%;
 }
-.space-between {
-    justify-content: space-between;
-}
 
 
-/* media sizes */
+/* MEDIA SIZES */
 @media screen and (max-width: 800px) {
     body {
         font-size: 1.1rem;
@@ -374,25 +367,45 @@ footer a, #active-main a, #hike-main a, #hike-second a {
     h3 {
         font-size: 1.5rem;
     }
+    .triangle svg {
+        height: 56px;
+    }
 }
-/* phone screen settings */
+/* PHONE SCREEN */
 @media screen and (max-width: 400px) {
     body {
         font-size: 1rem;
     }
     nav {
-    padding: 0.5px;
+        padding: 0.5px;
     }
-    nav ul {
+    nav {
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-evenly;
     }
     .links {
-        font-size: .70rem;
+        font-size: .8rem;
+        padding: 10px 0;
     }
 
     /* moves the squiggle up so there is no gap */
+    .triangle svg {
+        height: 36px;
+    }
+    .triangle-header{
+        text-align: center;
+        padding: 5px;
+        min-height: 40px;
+    }
+    .triangle-header h2 {
+        margin-top: 0;
+        margin-bottom: 40px;
+        padding: 0;
+    }
     .main-content {
+        margin-top: -1px;
+    }
+    .second-content {
         margin-top: -1px;
     }
     #small-column {

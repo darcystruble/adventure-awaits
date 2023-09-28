@@ -299,6 +299,7 @@ statePicked.addEventListener('click', async () => {
             noParkFound.innerText = 'No results found. Search again.'
             mainHike.append(noParkFound)
         }
+
     } else {
         return
     }

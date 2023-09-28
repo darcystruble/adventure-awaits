@@ -27,9 +27,6 @@ footer {
     padding: 20px;
     font-size: 1.2rem;
 }
-.second-content, .third-content {
-    margin: auto 20px;
-}
 h2 {
     color: #1a4147;
     text-shadow: 3px 3px #d2a246;
@@ -50,8 +47,9 @@ a {
 a:hover {
     color: #b56d2f;
 }
-b {
-    color: #b56d2f;
+.second-content, 
+.third-content {
+    margin: auto 20px;
 }
 
 /* HEADER ELEMENTS */
@@ -81,18 +79,18 @@ header {
 /* NAV-BAR */
 nav {
     background-color: #2e7371;
-    padding: 0.5px;
-}
-.nav {
+    display: flex;
+    justify-content: flex-end;
     list-style: none;
-    margin-right: 10px;
-    padding: 0 15px;
+    padding: 10px;
 }
+
 .links {
     color: #d2a246;
     text-decoration: none;
     font-family: Archive, sans-serif;
     font-size: 1.5rem;
+    padding: 0 15px;
 }
 nav a:hover {
     color: #1a4147;
@@ -103,30 +101,17 @@ nav a:active {
 .current-page {
     color: #1a4147;
 }
-#hamburger-menu {
-    display: none;
-}
 
-
-/* MAIN PAGE ElLEMENTS */
-table, th, td {
-    border: 1px solid #1a4147;
-}
-table {
-    width: 90%;
-}
-td {
-    text-align: center;
-}
+/* ALL PAGES */
 .main-content {
     margin-bottom: 50px;
     padding-bottom: 30px;
     position: relative;
 }
-.second-margin-top {
-    margin-top: 20px;
-}
 .side-bar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 30px;
     padding: 10px;
     width: 90%;
@@ -141,6 +126,20 @@ td {
 .side-bar-content a {
     font-size: 1rem;
 }
+
+
+/* HOME PAGE ElLEMENTS */
+table, 
+th, 
+td {
+    border: 1px solid #1a4147;
+}
+table {
+    width: 90%;
+}
+td {
+    text-align: center;
+}
 .curve {
     position: absolute;
     top: 0;
@@ -149,28 +148,36 @@ td {
     overflow: hidden;
     line-height: 0;
 }
-
 .curve svg {
     position: relative;
     display: block;
     width: calc(112% + 1.3px);
     height: 97px;
 }
-
 .curve .shape-fill {
-    fill: #d2a1468b;
+    fill: #edcc8e;
+}
+.more-content {
+    display: flex;
+    justify-content: space-between;
+}
+.second-margin-top {
+    margin-top: 20px;
 }
 .second-info {
-    margin-top: 50px;
+    margin-top: 100px;
 }
 .third-info {
-    margin-top: 40px;
+    margin-top: 80px;
 }
-#learn-header-1, #age-header-1, #state-header-1 {
+#learn-header-1, 
+#age-header-1, 
+#state-header-1 {
     position: relative;
     margin: 0;
-    padding: 20px 10px 20px 20px;
-    background-color: #d2a1468b;
+    padding: 20px 10px 20px 25px;
+    /* background-color: #d2a1468b; */
+    background-color: #edcc8e;
 }
 #kids-title, #quick-tips {
     margin-top: 0;
@@ -263,6 +270,9 @@ button:hover {
 #get-junior-ranger {
     margin-top: 20px;
 }
+#hike-main h2, #hike-second h2 {
+    text-shadow: 3px 3px #1a414747;
+}
 #active-main, #hike-main, #hike-second {
     margin-bottom: 10%;
 }
@@ -277,6 +287,7 @@ footer a, #active-main a, #hike-main a, #hike-second a {
 }
 #active-main img, #hike-main img, #hike-second img, #citizen-img {
     width: 250px;
+    box-shadow: 3px 3px 5px #aaa493;
 }
 
 
@@ -326,21 +337,31 @@ footer a, #active-main a, #hike-main a, #hike-second a {
        font-size: 1.5rem; 
     }
     h2 {
-        font-size: 1.7rem;
+        font-size: 2rem;
     }
     h3 {
         font-size: 1.5rem;
     }
 }
+/* phone screen settings */
 @media screen and (max-width: 400px) {
     body {
         font-size: 1rem;
     }
-
+    nav {
+    padding: 0.5px;
+    }
     nav ul {
         display: flex;
-        flex-direction: column;
-        align-items: flex-end;
+        justify-content: flex-end;
+    }
+    .links {
+        font-size: .70rem;
+    }
+
+    /* moves the squiggle up so there is no gap */
+    .main-content {
+        margin-top: -1px;
     }
     #small-column {
         flex-direction: column;

@@ -59,7 +59,7 @@ header {
     background-image: url("./assets/ganapathy-kumar-MQNWj9UeqKo-unsplash.jpg");
     background-size: cover;
     background-position: 50% 50%;
-    height: 60vh;
+    height: 40vh;
     width: 100%;
     overflow: hidden;
 }
@@ -80,6 +80,7 @@ header {
 /* NAV-BAR */
 nav {
     background-color: #2e7371;
+    padding: 0.5px;
 }
 .nav {
     list-style: none;
@@ -100,6 +101,9 @@ nav a:active {
 }
 .current-page {
     color: #1a4147;
+}
+#hamburger-menu {
+    display: none;
 }
 
 
@@ -296,10 +300,11 @@ footer a, #active-main a, #hike-main a, #hike-second a {
     body {
         font-size: 1rem;
     }
+
     nav ul {
         display: flex;
         flex-direction: column;
-        /* overflow: hidden; */
+        align-items: flex-end;
     }
     #small-column {
         flex-direction: column;

@@ -11,7 +11,9 @@ const picDescription2 = document.querySelector('.pic-description-2')
 const picDescription3 = document.querySelector('.pic-description-3')
 
 const randomPic = async () => {
-    const juniorRangerPics = await axios.get('https://developer.nps.gov/api/v1/multimedia/galleries?q=junior%20ranger&api_key=IY3dDsdp6sk5U4T51VeAKTqB99vPv2c4yfuWrIF5')
+    const juniorRangerPics = await axios.get(`https://developer.nps.gov/api/v1/multimedia/galleries?q=junior%20ranger&api_key=IY3dDsdp6sk5U4T51VeAKTqB99vPv2c4yfuWrIF5`)
+    const juniorRangerPics2 = await axios.get(`https://developer.nps.gov/api/v1/multimedia/galleries?start=50&q=junior%20ranger&api_key=IY3dDsdp6sk5U4T51VeAKTqB99vPv2c4yfuWrIF5`)
+    const juniorRangerPics3 = await axios.get(`https://developer.nps.gov/api/v1/multimedia/galleries?start=100&q=junior%20ranger&api_key=IY3dDsdp6sk5U4T51VeAKTqB99vPv2c4yfuWrIF5`)
     let random = Math.floor(Math.random() * 51)
     let random2 = Math.floor(Math.random() * 51)
     let random3 = Math.floor(Math.random() * 51)
@@ -19,11 +21,11 @@ const randomPic = async () => {
     rangerPic.src = currentImage.url
     rangerPic.alt = currentImage.altText
     picDescription.innerText = currentImage.description
-    let currentImage2 = juniorRangerPics.data.data[random2].images[0]
+    let currentImage2 = juniorRangerPics2.data.data[random2].images[0]
     rangerPic2.src = currentImage2.url
     rangerPic2.alt = currentImage2.altText
     picDescription2.innerText = currentImage2.description
-    let currentImage3 = juniorRangerPics.data.data[random3].images[0]
+    let currentImage3 = juniorRangerPics3.data.data[random3].images[0]
     rangerPic3.src = currentImage3.url
     rangerPic3.alt = currentImage3.altText
     picDescription3.innerText = currentImage3.description
@@ -54,7 +56,4 @@ button.addEventListener('click', async () => {
         intoDiv.classList.add('info-box')
         mainContent.append(intoDiv)
     })
-    // juniorRangerPics.data.data.forEach((pic) => {
-    //     console.log(pic.relatedParks[0].states)
-    // })
 })

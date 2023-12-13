@@ -1,9 +1,5 @@
 ////////////////////
-{/* <h3 id="citizen-sci"></h3>
-<div>
-    <img src="" alt="" id="citizen-img">
-    <div id="citizen-text"></div>
-    <div><a href="" target="blank" id="citizen-link"></a></div> */}
+
 // DOM ELEMENTS
 let loveHeader = document.querySelector('#love-header')
 let loveText = document.querySelector('#love-text')
@@ -22,8 +18,7 @@ let kidsLink = document.querySelector('#kids-link')
 let imageParks = document.querySelector('#park-photo')
 let imageDescrip = document.querySelector('#park-descrip')
 let navBar = document.querySelector('nav')
-
-// STICKY NAV BAR
+let hamburger = document.querySelector('.hamburger')
 
 // RANDOM PHOTO BOX
 const importanceOfNature = async () => {

@@ -88,6 +88,16 @@ nav {
     z-index: 99;
 }
 
+.nav-list {
+    margin: 0;
+    display: flex;
+    list-style: none;
+}
+
+.nav-item {
+    text-decoration: none;
+}
+
 .links {
     color: #d2a246;
     text-decoration: none;
@@ -376,12 +386,26 @@ footer a, #active-main a, #hike-main a, #hike-second a {
     body {
         font-size: 1rem;
     }
-    nav {
-        padding: 0.5px;
+    /* hamburger nav bar */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hamburger-bar {
+        margin: 2px;
+        width: 30px;
+        height: 5px;
+        background-color: #e6dfc7;
+        border-radius: 15px;
+    }
+    .nav-list {
+        display: none;
     }
     nav {
+        padding: 4px;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: flex-end;
     }
     .links {
         font-size: .8rem;
